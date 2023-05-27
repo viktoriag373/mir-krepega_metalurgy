@@ -2,14 +2,27 @@
 	background: $lightColor;
 	padding-top: 56px;
 	padding-bottom: 56px;
+	@media (max-width: 768px) {
+		padding-top: 25px;
+		padding-bottom: 31px;
+	}
 
 	&__title {
 		margin-bottom: 25px;
+		@media (max-width: 577px) {
+			margin-bottom: 15px;
+		}
 	}
 
 	&__content {
 		display: flex;
 		justify-content: space-between;
+		@media (max-width: 768px) {
+			flex-wrap: wrap;
+		}
+		@media (max-width: 577px) {
+			flex-wrap: nowrap;
+		}
 	}
 
 	&__item {
@@ -18,11 +31,22 @@
 		&:last-child {
 			margin-right: 0;
 		}
+		@media (max-width: 768px) {
+			max-width: 100%;
+			width: 48%;
+			margin-bottom: 15px;
+		}
+		@media (max-width: 577px) {
+			margin-bottom: 0;
+		}
 	}
 
 	&__item-img {
 		width: 100%;
 		border-radius: 9px;
+		@media (max-width: 577px) {
+			border-radius: 7px;
+			min-height: 102px;
+		}
 	}
 }
-

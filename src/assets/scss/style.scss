@@ -24,6 +24,12 @@ body {
 		font-size: 27px;
 		line-height: 126%;
 		color: #333333;
+		@media (max-width: 768px) {
+			font-size: 24px;
+		}
+		@media (max-width: 577px) {
+			font-size: 19px;
+		}
 	}
 
 }

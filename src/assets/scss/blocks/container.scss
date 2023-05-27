@@ -1,14 +1,22 @@
 .container {
-	max-width: 1200px;//1170
-	padding-left: 15px;
-	padding-right: 15px;
+	max-width: 1170px;//1170
+	padding-left: 0px;
+	padding-right: 0px;
 	margin-left: auto;
 	margin-right: auto;
 	// border: 1px solid red;
+	// @media (max-width: 576px) {
+	// 	padding-left: 0;
+	// 	padding-right: 0;
+	// }
 }
 
 .container-content {
 	max-width: 1106px;
 	margin-left: auto;
 	margin-right: auto;
+	@media (max-width: 1201px) {
+		padding-left: 15px;
+		padding-right: 10px;
+	}
 }

@@ -13,6 +13,13 @@
 	text-decoration: none;
 	color: $mainColor;
 
+	@media (max-width: 576px) {
+		width: 146px;
+		height: 42px;
+		font-size: 14px;
+		line-height: 129%;
+	}
+
 	&:hover {
 	}
 }

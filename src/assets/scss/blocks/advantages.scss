@@ -2,6 +2,9 @@
 	background: $lightColor;
 	padding-top: 56px;
 	padding-bottom: 56px;
+	@media (max-width: 577px) {
+		padding-top: 41px;
+	}
 
 	&__title {
 		margin-bottom: 30px;
