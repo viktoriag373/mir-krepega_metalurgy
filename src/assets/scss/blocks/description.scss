@@ -1,0 +1,28 @@
+.description {
+	background: $lightColor;
+	padding-top: 56px;
+	padding-bottom: 56px;
+
+	&__title {
+		margin-bottom: 25px;
+	}
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__item {
+		margin-right: 10px;
+		max-width: 342px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__item-img {
+		width: 100%;
+		border-radius: 9px;
+	}
+}
+

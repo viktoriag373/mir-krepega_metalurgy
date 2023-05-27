@@ -1,0 +1,42 @@
+@import "vendor/reset";
+@import "_vars";
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
+body {
+	font-family: "Jost", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.667vw;
+	height: 100%;
+	background: #eff3f4;
+
+	&._lock {
+		overflow: hidden;
+	}
+
+	.title-h2 {
+		font-size: 27px;
+		line-height: 126%;
+		color: #333333;
+	}
+
+}
+
+/* Blocks */
+@import "blocks/container";
+@import "blocks/button";
+@import "blocks/item-block";
+@import "blocks/discount";
+@import "blocks/preview-order";
+
+@import "blocks/promo";
+@import "blocks/description";
+@import "blocks/hits";
+@import "blocks/advantages";
+@import "blocks/footer";
