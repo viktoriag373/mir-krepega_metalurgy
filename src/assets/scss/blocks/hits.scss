@@ -19,6 +19,8 @@
 	}
 
 	&__list {
+		list-style-type: decimal;
+		list-style-position: inside;
 	}
 
 	&__item {
@@ -35,28 +37,42 @@
 	}
 
 	&__item-heading {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		position: relative;
+		display: inline-block;
+		// justify-content: space-between;
+		// align-items: center;
 		margin-bottom: 15px;
+		width: 97.8%;
+		@media (max-width: 1090px) {
+			width: 93.8%;
+		}
 		@media (max-width: 577px) {
 			margin-bottom: 7px;
 		}
 	}
 
 	&__item-title {
-		margin-left: 21px;
-		@media (max-width: 577px) {
-			margin-left: 16px;
-		}
+		// margin-left: 21px;
+		// @media (max-width: 577px) {
+		// 	margin-left: 16px;
+		// }
 	}
 
 	&__button-all {
+		position: absolute;
+		top: 2px;
+		bottom: 0;
+		right: 0;
+		margin-top: auto;
+		margin-bottom: auto;
 		font-weight: 400;
 		font-size: 14px;
 		line-height: 129%;
 		color: $mainColor;
 		text-decoration: none;
+		@media (max-width: 1090px) {
+			top: 0;
+		}
 		@media (max-width: 577px) {
 			font-size: 13px;
 			line-height: 138%;
