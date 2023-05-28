@@ -108,9 +108,11 @@ jQuery(document).ready(function ($) {
 	
 	function openPopupOrder() {
 		$('.popup').addClass('open')
+		$('body').addClass('_lock');
 	}
 	function closePopupOrder() {
 		$('.popup').removeClass('open')
+		$('body').removeClass('_lock');
 	}
 });
 
