@@ -1,4 +1,5 @@
 .popup {
+	display: none;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -7,11 +8,15 @@
 	width: 100%;
 	background: rgba(51, 51, 51, 0.3);
 	backdrop-filter: blur(3px);
-	display: flex;
+	// display: flex;
 	justify-content: center;
 	align-items: center;
 	z-index: 2000;
 	cursor: pointer;
+
+	&.open {
+		display: flex;
+	}
 	@media (max-width: 481px) {
 		align-items: flex-start;
 	}

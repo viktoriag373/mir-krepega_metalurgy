@@ -92,7 +92,26 @@ jQuery(document).ready(function ($) {
 		}
 	});
 
-
+	$('.button-order').on('click', function () {
+		if (!$('.popup').hasClass('open')) {
+			openPopupOrder()
+		}
+	});
+	$('.popup__content').click(function(event) {
+		event.stopPropagation(); // Останавливаем передачу клика вверх, чтобы не закрылось окно
+	});
+	$('.popup__close, .popup').on('click', function () {
+		if ($('.popup').hasClass('open')) {
+			closePopupOrder()
+		}
+	});
+	
+	function openPopupOrder() {
+		$('.popup').addClass('open')
+	}
+	function closePopupOrder() {
+		$('.popup').removeClass('open')
+	}
 });
 
 function slidersInit() {
