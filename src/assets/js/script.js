@@ -9,6 +9,90 @@ jQuery(document).ready(function ($) {
 	function resizeInit() {
 		slidersInit();
 	}
+
+	$('.popup__form-input').bind('input', function () {
+		if (this.value !== '') {
+			this.classList.add('input_filled');
+		} else {
+			this.classList.remove('input_filled');
+		}
+	});
+
+	let dropZone = $('.popup__wrap-input-file');
+	$('.popup__input-file').focus(function () {
+		$('label').addClass('focus');
+	})
+		.focusout(function () {
+			$('label').removeClass('focus');
+		});
+	dropZone.on('drag dragstart dragend dragover dragenter dragleave drop', function () {
+		return false;
+	});
+	dropZone.on('dragover dragenter', function () {
+		dropZone.addClass('dragover');
+	});
+	dropZone.on('dragleave', function (e) {
+		let dx = e.pageX - dropZone.offset().left;
+		let dy = e.pageY - dropZone.offset().top;
+		if ((dx < 0) || (dx > dropZone.width()) || (dy < 0) || (dy > dropZone.height())) {
+			dropZone.removeClass('dragover');
+		}
+	});
+	dropZone.on('drop', function (e) {
+		dropZone.removeClass('dragover');
+		let files = e.originalEvent.dataTransfer.files;
+		addFiles(files);
+	});
+	$('.popup__input-file').change(function () {
+		let files = this.files;//список файлов
+		addFiles(files);
+	});
+
+	let labelTextDefault = $('.popup__label-file-text').html()
+	$('.popup__input-file-clear').on('click', function (e) {
+		clearFiles($(this))
+		return false
+	});
+
+	function clearFiles(e) {
+		e.closest('.popup__wrap-input-file').find('.popup__label-file-text').html(labelTextDefault);
+		$('.popup__wrap-input-file').removeClass('added');
+	}
+
+	function addFiles(files) {
+		$('.popup__input-file').closest('.popup__wrap-input-file').find('.popup__label-file-text').html(files[0].name);
+		$('.popup__wrap-input-file').addClass('added');
+		let fileSize = files[0].size; // Размер файла в байтах
+		// Функция для конвертации размера файла
+		function convertFileSize(size) {
+			let suffix = ''
+			if (size < 1024) {
+				suffix = " B";
+			} else if (size < 1048576) {
+				size /= 1024;
+				suffix = " KB";
+			} else if (size < 1073741824) {
+				size /= 1048576;
+				suffix = " MB";
+			} else {
+				size /= 1073741824;
+				suffix = " GB";
+			}
+			return size.toFixed(1) + suffix
+		}
+		let formattedSize = convertFileSize(fileSize);
+		$('.popup__file-size').html(formattedSize)
+	}
+
+	$('.popup__form-checkbox').on('click', function () {
+		if ($(this).is(':checked')) {
+			$('.popup__button').addClass('active')
+		} else {
+			$('.popup__button').removeClass('active')
+		}
+	});
+
+
 });
 
 function slidersInit() {
@@ -16,7 +100,7 @@ function slidersInit() {
 		$('.hits__wrap-slider').addClass('swiper');
 		$('.hits__wrap-blocks').addClass('swiper-wrapper');
 		$('.hits__item-block').addClass('swiper-slide');
-		var hitsSlider = new Swiper(".hits__wrap-slider", {
+		let hitsSlider = new Swiper(".hits__wrap-slider", {
 			spaceBetween: 16,
 			slidesPerView: 2.5,
 			navigation: false,
@@ -31,7 +115,7 @@ function slidersInit() {
 		});
 
 		$('.hits__wrap-slider-1').addClass('swiper');
-		var hitsSlider1 = new Swiper(".hits__wrap-slider-1", {
+		let hitsSlider1 = new Swiper(".hits__wrap-slider-1", {
 			spaceBetween: 16,
 			slidesPerView: 2.5,
 			// slidesPerGroup: 1,
@@ -46,7 +130,7 @@ function slidersInit() {
 			}
 		});
 		$('.hits__wrap-slider-2').addClass('swiper');
-		var hitsSlider2 = new Swiper(".hits__wrap-slider-2", {
+		let hitsSlider2 = new Swiper(".hits__wrap-slider-2", {
 			spaceBetween: 16,
 			slidesPerView: 2.5,
 			navigation: false,
@@ -60,7 +144,7 @@ function slidersInit() {
 			}
 		});
 		$('.hits__wrap-slider-3').addClass('swiper');
-		var hitsSlider3 = new Swiper(".hits__wrap-slider-3", {
+		let hitsSlider3 = new Swiper(".hits__wrap-slider-3", {
 			spaceBetween: 16,
 			slidesPerView: 2.5,
 			navigation: false,
@@ -87,7 +171,7 @@ function slidersInit() {
 		$('.description__wrap-slider').addClass('swiper');
 		$('.description__content').addClass('swiper-wrapper');
 		$('.description__item').addClass('swiper-slide');
-		var descriptionSlider = new Swiper(".description__wrap-slider", {
+		let descriptionSlider = new Swiper(".description__wrap-slider", {
 			spaceBetween: 16,
 			slidesPerView: 1.835,
 			slidesPerGroup: 1,

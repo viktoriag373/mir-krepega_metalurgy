@@ -1,0 +1,77 @@
+<div class="popup">
+	<div class="popup__content">
+		<div class="popup__header">
+			<p class="popup__header-text">Заявка</p>
+			<div class="popup__close popup__close_mobile"></div>
+		</div>
+		<div class="popup__wrap-mobile">
+			<div class="popup__heading">
+				<div class="popup__wrap-title">
+					<p class="popup__title">
+						Отправьте заявку в любой удобной форме
+						и&nbsp;получите счет
+					</p>
+					<div class="popup__close"></div>
+				</div>
+			</div>
+			<p class="popup__form-description">
+				Оставьте контактные данные и мы свяжемся с вами в ближашее время
+			</p>
+			<form action="#" class="popup__form">
+				<div class="popup__wrap-input">
+					<input type="text" class="popup__form-input" name="" id="name" required>
+					<label for="name" class="popup__label-input">
+						Имя<span>*</span>
+					</label>
+				</div>
+				<div class="popup__wrap-input">
+					<input type="tel" class="popup__form-input" name="" id="tel" required>
+					<label for="tel" class="popup__label-input">
+						Телефон<span>*</span>
+					</label>
+				</div>
+				<div class="popup__wrap-input">
+					<input type="email" class="popup__form-input" name="" id="email" required>
+					<label for="email" class="popup__label-input">
+						E-mail<span>*</span>
+					</label>
+				</div>
+				<div class="popup__wrap-input">
+					<textarea class="popup__form-input" name="comm" id="comm"></textarea>
+					<label for="comm" class="popup__label-input popup__label-input_textarea">
+						Комментарий
+					</label>
+				</div>
+
+				<label class="popup__wrap-input-file">
+					<input type="file" class="popup__input-file" name="input-file" id="input-file">
+					<img src="assets/images/icon/clip.svg" class="popup__input-icon" alt="">
+					<img src="assets/images/icon/file.svg" class="popup__input-icon popup__input-icon_file" alt="">
+					<div class="popup__label-file">
+						<p class="popup__label-file-text">
+							<span>Добавьте</span> или перетащите сюда файл с заявкой и реквизитами компании
+						</p>
+						<p class="popup__file-size"></p>
+					</div>
+
+					<div class="popup__input-file-clear"></div>
+				</label>
+
+
+				<div class="popup__wrap-checkbox">
+					<input type="checkbox" class="popup__form-checkbox" name="form-checkbox" id="form-checkbox"  required>
+
+					<div class="popup__wrap-label">
+						<label for="form-checkbox" class="popup__form-label">
+							Я согласен на <a href="#">обработку персональных данных</a>
+						</label>
+					</div>
+
+				</div>
+
+				<button type="submit" class="popup__button">Отправить заявку</button>
+			</form>
+		</div>
+
+	</div>
+</div>
