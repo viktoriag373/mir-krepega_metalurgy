@@ -8,7 +8,6 @@
 	width: 100%;
 	background: rgba(51, 51, 51, 0.3);
 	backdrop-filter: blur(3px);
-	// display: flex;
 	justify-content: center;
 	align-items: center;
 	z-index: 2000;
@@ -202,9 +201,7 @@
 		&_textarea {
 			top: 12px;
 			bottom: auto;
-			// @media (max-width: 481px) {
-			// 	top: 8px;
-			// }
+
 		}
 	}
 
@@ -225,7 +222,7 @@
 			padding-top: 16px;
 			padding-left: 11px;
 		}
-		// padding: 12px 12px 5px 12px;
+
 		&:focus,
 		&.input_filled {
 			border: 1px solid #005188;
@@ -305,7 +302,7 @@
 
 			.popup__input-icon {
 				display: none;
-
+				margin-right: 13px;
 				&_file {
 					display: block;
 					@media (max-width: 481px) {
@@ -329,9 +326,12 @@
 	}
 
 	&__label-file {
-		// display: flex;
-		// align-items: center;
+
 		overflow: hidden;
+		margin-top: 6px;
+		@media (max-width: 481px) {
+			margin-top: 0;
+		}
 	}
 
 	&__label-file-text {
@@ -426,7 +426,7 @@
 		display: flex;
 		align-items: center;
 		width: 100%;
-		margin-bottom: 16px;
+		margin-bottom: 17px;
 		@media (max-width: 481px) {
 			align-items: flex-start;
 			margin-bottom: 13px;
@@ -471,17 +471,13 @@
 			background-position: center center;
 			background-size: 70%;
 		}
-
-		// width: 14px;
-		// height: 14px;
-		// border: 1px solid #eaeaea;
 	}
 
 	&__form-label {
 		font-size: 14px;
 		line-height: 129%;
 		color: #757575;
-		margin-left: 8px;
+		margin-left: 7px;
 		@media (max-width: 481px) {
 			font-size: 13px;
 			line-height: 138%;
@@ -501,7 +497,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		font-size: 16px;
+		font-size: 14px;
 		line-height: 138%;
 		color: #ffffff;
 		text-decoration: none;
