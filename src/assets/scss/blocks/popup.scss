@@ -92,7 +92,7 @@
 		position: absolute;
 		top: 0px;
 		bottom: 0;
-		right: 0px;
+		right: 3px;
 		margin: auto 0;
 		display: flex;
 		align-items: center;
@@ -214,7 +214,7 @@
 		line-height: 138%;
 		color: #333333;
 		height: 42px;
-		padding-top: 13px;
+		padding-top: 16px;
 		padding-left: 10px;
 		padding-right: 12px;
 		font-family: "Jost", sans-serif;
@@ -229,7 +229,7 @@
 		}
 		&:focus + label,
 		&.input_filled + label {
-			transform: translateY(-11px);
+			transform: translateY(-10px);
 			font-size: 11px;
 			line-height: 127%;
 			@media (max-width: 481px) {
@@ -269,6 +269,7 @@
 		@media (max-width: 481px) {
 			min-height: 52px;
 			margin-bottom: 13px;
+			margin-top: 2px;
 		}
 
 		&.dragover {
@@ -285,10 +286,12 @@
 		}
 
 		&.added {
+			border: 1px solid #eaeaea;
 			padding-right: 35px;
 			@media (max-width: 481px) {
 				padding-left: 11px;
 				padding-right: 25px;
+				margin-top: 0;
 			}
 			.popup__label-file-text {
 				font-size: 13px;
@@ -360,7 +363,7 @@
 
 	&__input-file-clear {
 		position: absolute;
-		top: 0px;
+		top: 4px;
 		bottom: 0;
 		right: 15px;
 		margin: auto 0;
@@ -391,7 +394,7 @@
 			left: 0;
 			right: 0;
 			margin: 0 auto;
-			width: 70%;
+			width: 50%;
 			height: 1px;
 			transition: all 0.3s ease 0s;
 			background: $mainColor;
@@ -412,7 +415,7 @@
 	}
 
 	&__input-icon {
-		margin-right: 10px;
+		margin-right: 8px;
 		@media (max-width: 481px) {
 			margin-right: 8px;
 			width: 12px;
